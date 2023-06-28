@@ -14,24 +14,6 @@
   img: '/images/SearchPhotos.png'
   desc: 著作権フリーの画像を簡単検索、ダウンロードできるアプリをSwift言語で作ってみました。<br>・App名 「SearchPhotos」<br>・価格 「¥0（広告なし）」<br>App Storeからダウンロードできます。
 
-- name: 【GitHub】ソースコード公開(2)
-  url: https://github.com/tsune10696/codeSwift/tree/main/App_Honyaku
-  date: 2022/12/26
-  img: '/images/github.png'
-  desc: iOSアプリ「Honyaku」のソースコードをGitHubに公開しました。
-  
-- name: 【iOSアプリ】iOSアプリ作成(2)
-  url: https://apps.apple.com/app/honyaku/id1661095289
-  date: 2022/12/26
-  img: '/images/Honyaku.png'
-  desc: 入力した言語を自動判別して、日本語に翻訳してくれるアプリをSwift言語で作ってみました。<br>・App名 「Honyaku」<br>・価格 「¥0（広告なし）」<br>App Storeからダウンロードできます。
-
-- name: 【Qiita】C++関係の記事投稿
-  url: https://qiita.com/TunaProducts/items/8f4653953ca97ec48d65
-  date: 2022/12/20
-  img: '/images/Qiita.png'
-  desc: C++関係の記事を書きました。<br>内容は「流体の流れ可視化するシミュレーション解析」についてです。<br>また、記事内で用いた解析用コードをGitHubに公開しましたので、気になる方はQiita記事内のリンクから飛んで頂ければと思います。
-
 - name: 【Qiita】FORTRAN関係の記事投稿
   url: https://qiita.com/TunaProducts/items/ef167bf7f4a9d1673ca2
   date: 2022/12/20

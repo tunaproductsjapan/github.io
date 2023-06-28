@@ -7,18 +7,6 @@
   date: 2023/02/15
   img: '/images/github.png'
   desc: iOSアプリ「SearchPhotos」のソースコードをGitHubに公開しました。
-
-- name: 【iOSアプリ】iOSアプリ作成(3)
-  url: https://apps.apple.com/jp/app/searchphotos/id1668961349
-  date: 2023/02/14
-  img: '/images/SearchPhotos.png'
-  desc: 著作権フリーの画像を簡単検索、ダウンロードできるアプリをSwift言語で作ってみました。<br>・App名 「SearchPhotos」<br>・価格 「¥0（広告なし）」<br>App Storeからダウンロードできます。
-
-- name: 【GitHub】ソースコード公開(2)
-  url: https://github.com/tsune10696/codeSwift/tree/main/App_Honyaku
-  date: 2022/12/26
-  img: '/images/github.png'
-  desc: iOSアプリ「Honyaku」のソースコードをGitHubに公開しました。
   
 - name: 【iOSアプリ】iOSアプリ作成(2)
   url: https://apps.apple.com/app/honyaku/id1661095289
