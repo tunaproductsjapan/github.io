@@ -2,7 +2,7 @@
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 
-- name: 【GitHub】ソースコード公開(3)
+- name: 【GitHub】ソースコード公開(3) pro2-2
   url: https://github.com/tsune10696/codeSwift/tree/main/SearchFreePhotos
   date: 2023/02/15
   img: '/images/github.png'
