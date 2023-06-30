@@ -55,31 +55,7 @@
   date: 2022/12/01-09
   img: '/images/Qiita.png'
   desc: アウトプットがてら、RxSwift関係の記事を幾つか書きました。
-  
-- name: 【LINEスタンプ】LINEスタンプ作成
-  url: https://store.line.me/stickershop/product/20512055/ja
-  date: 2022/08/22
-  img: '/images/LINE.png'
-  desc: 単純に興味があって、LINEスタンプを作成・公開してみました。<br>意外とすんなり承認されました。<br>ツナ缶のオリジナルキャラクターのスタンプです。
-  
-- name: 【資格取得】一級建築士免許を取得
-  url: https://www.jaeic.or.jp/smph/shiken/1k/1k-data.html
-  date: 2022/05/18
-  img: '/images/Sekkei.png'
-  desc: 免許審査が完了し、晴れて一級建築士となりました。試験の総合合格率9.9%になんとか滑り込めました。(直近5年間の試験結果はリンク参照)
-  
-- name: 【note】社会人博士課程入学に関して2
-  url: https://note.com/hanbun_gakusei/n/n17c8ece9415b
-  date: 2021/02/07
-  img: '/images/Note.png'
-  desc: 社会人をしながら大学院に通いたいが、周囲に同じような経験をしている人が少ない人も多いと思うので、情報共有と備忘録兼ねて、社会人博士課程入学までに必要なものをnoteにまとめました。
-  
-- name: 【note】社会人博士課程入学に関して1
-  url: https://note.com/hanbun_gakusei/n/n8dfa9191f6c7
-  date: 2021/01/17
-  img: '/images/Note.png'
-  desc: 2021年4月から、建築設計の仕事をしながら、大学院の博士課程に進学することになったので、入学の経緯などをnoteにまとめました。
-  
+
 - name: 【LaTex,GitHub】LaTexで修士論文執筆
   url: https://github.com/tsune10696/LaTex/tree/main/shuron
   date: 2016/03
@@ -97,12 +73,6 @@
   date: 2014/11/19-26
   img: '/images/UCBerkeley_2014.png'
   desc: オープンソースの解析フレームワーク(OpenSees)のC++コード開発に関して打ち合わせをする為、カリフォルニア大学バークレー校(UC Berkeley)等に行ってきました。米国訪問目的の要旨の資料をリンク先に保存しています。
-  
-- name: 【設計コンペ】設計コンペ入賞
-  url: https://github.com/tsune10696/other/blob/main/Competition_2014.pdf
-  date: 2014/07/17
-  img: '/images/Competition_2014.png'
-  desc: 2014年度日本建築学会技術部門設計競技にて佳作を受賞しました。プレゼンボード等をリンク先に保存しています。
 
 - name: 【C++,GitHub】構造解析フーレムワークの開発<br>(Takeda model)
   url: https://github.com/tsune10696/OpenSees/blob/main/Takeda/Takeda_UTF-8.zip
