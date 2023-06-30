@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: tunaProducts
+title: tunaProducts <tech>
 description: 'Business Card Page'
-profilepic: '/images/tunaproductsjapan.png'
+profilepic: '/images/forAPP.png'
 bkimage: '/images/Toya.jpg'
 font_awesome: 'XXXXXXXXXX.js'
 
@@ -32,7 +32,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tunaproductsjapan.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 author:
-  name: 'tunaProducts'
+  name: 'tunaProducts <tech>'
   github_username: tunaproductsjapan
   qiita_username: TunaProducts
   email: tunaproductsjapan@gmail.com
