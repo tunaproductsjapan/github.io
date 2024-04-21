@@ -27,7 +27,7 @@ window.onload = async () => {
 //データの読み取り(絞込みを行う)
     const snapShot = await firestore
         .collection("todo")
-        .where("category", "==" "国語")
+        .where("category", "==", "国語")
         .get();
 
     const proj = snapShot.docs.map((doc) => ({
