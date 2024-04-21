@@ -14,10 +14,11 @@ window.onload = async () => {
     }
 };
 
-//データの読み取り(複数)
+// //データの読み取り(複数)
 // const snapShot = await firestore.collection("advertisementConsultation").get();
 // const proj = snapShot.docs.map((doc) => ({
 //     id: doc.id,
 // }));
+// };
 
 // console.log(proj);
