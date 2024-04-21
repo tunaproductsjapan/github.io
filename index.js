@@ -13,7 +13,6 @@ window.onload = async () => {
 const snapShot = await firestore.collection("advertisementConsultation").get();
 const proj = snapShot.docs.map((doc) => ({
     id: doc.id,
-    company: doc.data().company,
 }));
 
 console.log(proj);
