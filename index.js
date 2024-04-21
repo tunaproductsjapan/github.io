@@ -24,7 +24,22 @@ window.onload = async () => {
     // console.log(proj);
 
 
-//データの読み取り(絞込みを行う)
+// //データの読み取り(絞込みを行う)
+//     const snapShot = await firestore
+//         .collection("todo")
+//         .where("category", "==", "国語")
+//         .get();
+
+//     const proj = snapShot.docs.map((doc) => ({
+//         id: doc.id,
+//         dekita: doc.data().dekita,
+//         category: doc.data().category,
+//     }));
+//     console.log(proj);
+
+
+//試し
+    //データの読み取り(絞込みを行う)
     const snapShot = await firestore
         .collection("todo")
         .where("category", "==", "国語")
@@ -35,6 +50,20 @@ window.onload = async () => {
         dekita: doc.data().dekita,
         category: doc.data().category,
     }));
-    console.log(proj);
+
+    // HTMLにデータを表示する
+    displayData(proj);
 };
 
+//試し
+function displayData(projData) {
+    // データ表示用の要素を取得
+    const dataList = document.getElementById('data-list');
+
+    // データをHTMLに追加して表示
+    projData.forEach((data) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `ID: ${data.id}, できた: ${data.dekita}, カテゴリー: ${data.category}`;
+        dataList.appendChild(listItem);
+    });
+}
