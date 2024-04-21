@@ -10,10 +10,10 @@ window.onload = async () => {
 // console.log(doc.data());
 
 //データの読み取り(複数)
-const snapShot = await firestore.collection("projectManagement").get();
+const snapShot = await firestore.collection("advertisementConsultation").get();
 const proj = snapShot.docs.map((doc) => ({
     id: doc.id,
-    category: doc.data().category,
+    company: doc.data().company,
 }));
 
 console.log(proj);
