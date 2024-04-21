@@ -33,11 +33,8 @@ window.onload = async () => {
     const proj = snapShot.docs.map((doc) => ({
         id: doc.id,
         dekita: doc.data().dekita,
-        category: doc.data().category.
+        category: doc.data().category
     }));
-
     console.log(proj);
-
-
 };
 
