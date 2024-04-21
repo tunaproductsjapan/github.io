@@ -1,0 +1,41 @@
+
+$(function()
+{
+	if ($('.calendar').length != 0)
+	{
+		$('.datepicker').datepicker();
+
+		$('.datepicker_id').each(function()
+		{
+			setHiddenDate($(this).val());
+		});
+
+		$('.datepicker').on('change', function()
+		{
+			$('.datepicker_id').each(function()
+			{
+				setHiddenDate($(this).val());
+			});
+		});
+	}
+});
+
+function allCheck(check, name)
+{
+	if (check.checked == true)
+	{
+		chk = true;
+	}
+	else
+	{
+		chk = false;
+	}
+
+	for (i = 0; i < document.form.elements.length; i++)
+	{
+		if (document.form.elements[i].type == 'checkbox' && document.form.elements[i].name == name)
+		{
+			document.form.elements[i].checked = chk;
+		}
+	}
+}
