@@ -1,0 +1,74 @@
+$(() =>
+{
+	const points_key = 'ih03pk77bbtv';
+	const point_rate_key = 'ih3dd7vezzfx';
+	const entry_count_key = 'ih3mmnb9zzel';
+	const edit_unix_key = 'edit_unix';
+	const keys = {
+		[points_key]: 'points',
+		[point_rate_key]: 'point_rate',
+		[entry_count_key]: 'entry_count',
+		[edit_unix_key]: 'edit_unix',
+	};
+
+	const orderSelectBox = $('select[name="order"]');
+
+	const url = new URL(window.location);
+	const params = new URLSearchParams(location.search);
+
+	const order = params.get('order');
+	const orderKey = params.get('order_key');
+
+	$('form').append(`<input type="hidden" name="order" value="${order}">`);
+	$('form').append(`<input type="hidden" name="order_key" value="${orderKey}">`);
+
+	if (order && orderKey)
+	{
+		const value = `${keys[orderKey] ?? ''}_${order.toLowerCase()}`;
+		orderSelectBox.val(value);
+	}
+
+	orderSelectBox.on('change', event =>
+	{
+		event.preventDefault();
+		event.stopPropagation();
+		const value = orderSelectBox.val();
+
+		switch (value)
+		{
+			case 'entry_count_desc':
+				params.set('order', 'DESC');
+				params.set('order_key', entry_count_key);
+				break;
+
+			case 'points_desc':
+				params.set('order', 'DESC');
+				params.set('order_key', points_key);
+				break;
+
+			case 'points_asc':
+				params.set('order', 'ASC');
+				params.set('order_key', points_key);
+				break;
+
+			case 'point_rate_desc':
+				params.set('order', 'DESC');
+				params.set('order_key', point_rate_key);
+				break;
+
+			case 'point_rate_asc':
+				params.set('order', 'ASC');
+				params.set('order_key', point_rate_key);
+				break;
+
+			case 'edit_unix_desc':
+			default:
+				params.set('order', 'DESC');
+				params.set('order_key', 'edit_unix');
+				break;
+		}
+
+		url.search = params;
+		location.href = url.href;
+	});
+});

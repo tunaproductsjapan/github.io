@@ -1,0 +1,137 @@
+
+$(() =>
+{
+	updateProfileCompleteness().catch(e => console.error(e));
+
+	LOGIN_BONUS.onUpdate(data =>
+	{
+		updateLoginBonus(data);
+	});
+
+	$('#ld_mypage_pickup_list').load('./contents.php?c=ld_mypage_pickup_list');
+
+	updatePoints('#scheduled_points', {"state_status":"sh02fpwptdi4"}, 1.5).catch(e => console.error(e));
+	updatePoints('#current_points', {"state": 1}, 2.5).catch(e => console.error(e));
+
+	updateTierPointsNote().catch(e => console.error(e));
+	updatePointsDateNote();
+});
+
+function updateLoginBonus(data)
+{
+	$('#ld_mypage_point_history').load('./contents.php?c=ld_mypage_point_history');
+
+	if(data.days_logging_in >= 28) return;
+
+	const html = `
+	<div class="mypage__info">
+		<div class="mypage__info__inner">
+			<p>連続ログイン ${data.days_logging_in}日目</p>
+			<p class="mypage__info__inner__point">${data.next_bonus_days}日連続ログインで<span>${data.next_bonus_points}</span>Pをゲット</p>
+		</div>
+	</div>
+	`;
+	$('.mypage__profile').before(html);
+}
+
+async function updateProfileCompleteness()
+{
+	if(!display_profile_completeness) return;
+
+	$('.mypage__profile').show();
+
+	updateProfileCompletenessChart(profile_completeness);
+
+	if(Math.floor(profile_completeness) !== 100) return;
+
+	COINS.draw(200);
+
+	await fetch('./api/ex/p/poimal/updateDisplayState?profile_completeness=0', {
+		method: 'GET',
+		headers: {'X-Auth-Token': 'ah47gzdebwd3:40ikgiqkdv40ogokcs08ock4'},
+	});
+}
+
+function updateProfileCompletenessChart(percent)
+{
+	$('#chart').attr('data-percent', percent);
+
+	$('#chart').easyPieChart({
+		easing: 'easeOutQuart',
+		barColor: () =>
+		{
+			const ctx = $('#chart canvas').get(0).getContext('2d');
+			const gradient = ctx.createLinearGradient(0, -120, 0, 120);
+			gradient.addColorStop(0, '#a974fa');
+			gradient.addColorStop(0.5, '#fb94cc');
+			gradient.addColorStop(1, '#fec901');
+			return gradient;
+		},
+		animate: 3000,
+		lineWidth: 14,
+		size: 180,
+		trackWidth: 14,
+		scaleLength: 10,
+		scaleColor: false,
+		onStep: (from, to, p) =>
+		{
+			$('.mypage__profile__status__percent').html(Math.round(p));
+		}
+	});
+}
+
+async function updatePoints(element, search_parames, seconds)
+{
+	search_parames = $.param(search_parames);
+
+	const response = await fetch(`./api/v1/m/point/sum?point_sheet=ph02fpwprhnh&${search_parames}`, {
+		method: 'GET',
+		headers: {'X-Auth-Token': 'session'},
+	});
+	const data = await response.json();
+
+	let points = 0;
+	const max_points = Number(data.sum);
+
+	const fps = 30;
+	const step = Math.round(max_points / fps / seconds);
+
+	const timer = setInterval(() =>
+	{
+		$(element).html(`<span>${points.toLocaleString()}</span>P`);
+
+		if(points >= max_points)
+		{
+			clearInterval(timer);
+		}
+		points += step;
+		points = Math.min(points, max_points);
+	}, 1000 / fps);
+}
+
+
+async function updateTierPointsNote()
+{
+	const response = await fetch('./api/v1/m/point/sum?point_sheet=ph02fpwprhnh&state=1&param1=tier', {
+		method: 'GET',
+		headers: {'X-Auth-Token': 'session'},
+	});
+	const data = await response.json();
+
+	const points = Number(data.sum).toLocaleString();
+
+	$('#tier_points').html(`紹介した人から獲得したポイント ${points}P を含む`);
+}
+
+function updatePointsDateNote()
+{
+	const now = new Date();
+	const y = now.getFullYear().toString();
+	const m = (now.getMonth() + 1).toString().padStart(2, '0');
+	const d = now.getDate().toString().padStart(2, '0');
+	const h = now.getHours().toString().padStart(2, '0');
+	const i = now.getMinutes().toString().padStart(2, '0');
+	const date_str = `${y}年${m}月${d}日 ${h}時${i}分 時点`;
+
+	$('#point_update_time').html(date_str);
+}

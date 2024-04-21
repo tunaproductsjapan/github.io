@@ -1,0 +1,59 @@
+
+function deleteFileVal(module_type, type, id, name, mes, hide_class, show_class, val_id)
+{
+	if (!module_type || !type || !id || !name)
+	{
+		swal('Error.', '削除対象が選択されていません。', 'error');
+		return;
+	}
+
+	if (!mes) mes = 'このファイルを削除しますか？';
+
+	swal({
+		title: '削除確認',
+		text: mes,
+		type: 'error',
+		showCancelButton: true,
+		cancelButtonText: 'キャンセル',
+		confirmButtonColor: '#DD6B55',
+		confirmButtonText: '削除',
+		closeOnConfirm: false
+	},
+	function()
+	{
+		$.getJSON('./proc.php?module=palette&run=deleteValFile&json=true&module_type=' + module_type + '&type=' + type + '&id=' + id + '&name=' + name, null, function(data)
+		{
+			switch (data.state)
+			{
+				case 1:
+
+					if (hide_class) $('.' + hide_class).hide();
+					if (show_class) $('.' + show_class).show();
+
+					//file_tmpを削除
+					if ($('#' + val_id + '_tmp_id').length)
+					{
+						$('#' + val_id + '_tmp_id').val('');
+					}
+
+					title = 'Success!';
+					type = 'success';
+					mes = 'ファイルを削除しました。';
+					break;
+
+				default:
+					title = 'Error.';
+					type = 'error';
+					mes = '予期せぬエラーが発生しました。';
+					break;
+			}
+
+			swal({
+				title: title,
+				text: mes,
+				type: type,
+				closeOnConfirm: true
+			});
+		});
+	});
+}

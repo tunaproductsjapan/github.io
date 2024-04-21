@@ -1,0 +1,150 @@
+
+class LoginBonus
+{
+	constructor()
+	{
+		this.data = null;
+		this.callbacks = [];
+
+		this.update().catch(e => console.error(e));
+	}
+
+	async update()
+	{
+		const url = './api/ex/p/poimal/updateLoginBonus';
+
+		const response = await fetch(url, {
+			method: 'GET',
+			headers: {
+				'X-HTTP-Method-Override': 'GET',
+				'X-Auth-Token': 'ah47gzdebwd3:40ikgiqkdv40ogokcs08ock4',
+				'Content-Type': 'application/json'
+			},
+		});
+
+		this.data = await response.json();
+
+		this.draw();
+
+		this.callbacks.forEach(func => func(this.data));
+
+		this.callbacks = [];
+	}
+
+	onUpdate(func)
+	{
+		if(this.data)
+		{
+			func(this.data);
+		}
+		else
+		{
+			this.callbacks.push(func);
+		}
+	}
+
+	draw()
+	{
+		if(this.data.state != 1) return;
+		if(this.data.days_logging_in > 28) return;
+
+		const modal_html = `
+		<div class="modal">
+			<div class="modal__bg modalclose"></div>
+				<div class="modal__window">
+					<div class="modal__contents">
+						<div class="modal__use">
+							<div class="modal__use__title">毎日ログインキャンペーン！</div>
+							<div class="modal__mainbg is-login${('00' + this.data.days_logging_in).slice(-2)}">
+								<p>ログイン${this.data.days_logging_in}日目</p>
+							</div>
+						<div class="closeBtn modalclose"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		`;
+		$('header').append(modal_html);
+
+		setTimeout(() =>
+		{
+			$('.modalclose').on('click', () => $('.modal').hide());
+			$('.close').on('click', () => $('.modal').hide());
+
+			$('.modal').addClass('is-show');
+
+			const images_html = `
+			<div class="camp__logo"><img src="./file/box/img/camp_logo.png" alt=""></div>
+			<div class="camp__login"><img src="./file/box/img/camp_login1.png" alt=""></dvi>
+			`;
+			$('.modal__mainbg').append(images_html);
+
+			setTimeout(() =>
+			{
+				let index = 1;
+				const timer = setInterval(() =>
+				{
+					$('.camp__login img').attr('src', `./file/box/img/camp_login${index}.png`);
+
+					if(index > this.data.days_logging_in)
+					{
+						clearInterval(timer);
+
+						if(this.data.bonus_points > 0)
+						{
+							COINS.draw(this.data.bonus_points);
+						}
+					}
+					index++;
+				}, 300);
+			}, 2000);
+		}, 500);
+	}
+}
+
+class Coins
+{
+	draw(points)
+	{
+		$('body').append('<div class="parent3Dtransform"></div>');
+
+		const big_coin_html = `
+		<div class="camp__icon01"><img src="./file/box/img/top_move04.svg" alt=""></div>
+		<div class="camp__icon02"><img src="./file/box/img/top_move04.svg" alt=""></div>
+		<div class="camp__point"><img src="./file/box/img/camp_icon_${points}p.svg" alt=""></div>
+		`;
+		$('.parent3Dtransform').append(big_coin_html);
+
+		setTimeout(() =>
+		{
+			document.querySelector('.camp__point').addEventListener('click', event =>
+			{
+				party.confetti(event.currentTarget, {
+					count: party.variation.range(50, 50),
+				});
+			});
+
+			$('.camp__point').trigger('click');
+
+			let coins_html = '';
+			for(let i = 0; i < 31; i++)
+			{
+				coins_html += '<div class="coin"><span></span></div>';
+			}
+			$('.parent3Dtransform').append(coins_html);
+
+			$('.parent3Dtransform').append('<div class="coin_meny01"></div>');
+			$('.parent3Dtransform').append('<div class="coin_meny02"></div>');
+
+			$(window).delay(4000).queue(() =>
+			{
+				$('.parent3Dtransform').addClass('mend');
+				$('.parent3Dtransform').fadeOut(2000);
+				$('.camp__logo').addClass('efeend');
+			});
+		}, 2000);
+	}
+}
+
+const COINS = new Coins();
+const LOGIN_BONUS = new LoginBonus();
