@@ -644,15 +644,19 @@
         if (entry.isIntersecting) {
           const ld_content_id = entry.target.dataset.contentId;
           
-          // Firebaseからデータを取得
-          const dbRef = firebase.database().ref('contents/' + ld_content_id);
-          dbRef.once('value', function(snapshot) {
-            const contentData = snapshot.val();
-            if (contentData) {
+          // Firestoreからデータを取得
+          const db = firebase.firestore();
+          const docRef = db.collection("contents").doc(ld_content_id);
+          docRef.get().then((doc) => {
+            if (doc.exists) {
               // コンテンツを表示
-              entry.target.innerHTML = contentData;
+              entry.target.innerHTML = doc.data().content;
               entry.target.classList.remove('is-loading');
+            } else {
+              console.log("No such document!");
             }
+          }).catch((error) => {
+            console.log("Error getting document:", error);
           });
 
           observer.unobserve(entry.target);
@@ -667,9 +671,6 @@
     });
   });
 </script>
-
-
-
 
 
 <!-- 
