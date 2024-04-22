@@ -632,6 +632,47 @@
             setTimeout('countDown()', 1000);
         }
     </script>
+
+
+<script>
+  // Firebaseの設定
+  document.addEventListener('DOMContentLoaded', function() {
+    const target_elms = document.querySelectorAll('[data-content-id]');
+
+    const cb = function(entries, observer) {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          const ld_content_id = entry.target.dataset.contentId;
+          
+          // Firebaseからデータを取得
+          const dbRef = firebase.database().ref('contents/' + ld_content_id);
+          dbRef.once('value', function(snapshot) {
+            const contentData = snapshot.val();
+            if (contentData) {
+              // コンテンツを表示
+              entry.target.innerHTML = contentData;
+              entry.target.classList.remove('is-loading');
+            }
+          });
+
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const io = new IntersectionObserver(cb);
+    target_elms.forEach(elm => {
+      elm.classList.add('is-loading');
+      io.observe(elm);
+    });
+  });
+</script>
+
+
+
+
+
+<!-- 
       <script>
         document.addEventListener('DOMContentLoaded', function()
             {
@@ -660,7 +701,7 @@
             io.observe(elm);
           });
             })
-      </script>
+      </script> -->
 
 
 </body></html>
