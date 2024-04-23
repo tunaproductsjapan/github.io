@@ -1,6 +1,6 @@
 import { firestore } from "./firebase.js";
 
-// window.onload = async () => {
+window.onload = async () => {
 
 // //     ////データの読み取り(1件)
 // //     const docId = "8VdhH86buIVuI5lZinH1";
@@ -38,32 +38,32 @@ import { firestore } from "./firebase.js";
 // //     console.log(proj);
 
 
-// //試し
-//     //データの読み取り(絞込みを行う)
-//     const snapShot = await firestore
-//         .collection("todo")
-//         .where("category", "==", "国語")
-//         .get();
+//試し
+    //データの読み取り(絞込みを行う)
+    const snapShot = await firestore
+        .collection("todo")
+        .where("category", "==", "国語")
+        .get();
 
-//     const proj = snapShot.docs.map((doc) => ({
-//         id: doc.id,
-//         dekita: doc.data().dekita,
-//         category: doc.data().category,
-//     }));
+    const proj = snapShot.docs.map((doc) => ({
+        id: doc.id,
+        dekita: doc.data().dekita,
+        category: doc.data().category,
+    }));
 
-//     // HTMLにデータを表示する
-//     displayData(proj);
-// };
+    // HTMLにデータを表示する
+    displayData(proj);
+};
 
-// //試し
-// function displayData(projData) {
-//     // データ表示用の要素を取得
-//     const dataList = document.getElementById('data-list');
+//試し
+function displayData(projData) {
+    // データ表示用の要素を取得
+    const dataList = document.getElementById('data-list');
 
-//     // データをHTMLに追加して表示
-//     projData.forEach((data) => {
-//         const listItem = document.createElement('li');
-//         listItem.textContent = `ID: ${data.id}, できた: ${data.dekita}, カテゴリー: ${data.category}`;
-//         dataList.appendChild(listItem);
-//     });
-// }
+    // データをHTMLに追加して表示
+    projData.forEach((data) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `ID: ${data.id}, できた: ${data.dekita}, カテゴリー: ${data.category}`;
+        dataList.appendChild(listItem);
+    });
+}
