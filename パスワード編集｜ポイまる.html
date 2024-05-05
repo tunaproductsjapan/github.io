@@ -1,159 +1,250 @@
 <!DOCTYPE html>
-<!-- saved from url=(0046)https://poimal.jp/contents.php?c=password_edit -->
-<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+
+<!-- HTML文書の開始と、言語を日本語に設定 -->
+<html lang="ja">
+
+
+
+
+
+<!-- headセクションの開始 --> <!-- headセクションの開始 -->  <!-- headセクションの開始 -->  
+<!-- headセクションの開始 --> <!-- headセクションの開始 -->  <!-- headセクションの開始 -->
+
+<head>
+ <!-- UTF-8に設定 -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!-- ビューポートの設定：デバイスの幅に合わせ、ズームを無効 -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>パスワード編集｜ポイまる</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <script type="text/javascript" src="./パスワード編集｜ポイまる_files/jquery.js.ダウンロード"></script>
+ <!-- タイトル：「ポイまる」 -->
+  <title>ポイまる</title>
+ <!-- 一旦コメントアウト設定 -->
+  <!-- <meta name="thumbnail" content="./file/box/thumbnail.jpg">
   <link rel="icon" type="image/x-icon" href="https://poimal.jp/favicon.ico">
-  <link rel="apple-touch-icon" href="https://poimal.jp/touch-icon.png">
-  <link href="./パスワード編集｜ポイまる_files/css2" rel="stylesheet">
-  <link rel="stylesheet" href="./パスワード編集｜ポイまる_files/all.min.css">
-  <link href="./パスワード編集｜ポイまる_files/style.css" rel="stylesheet" type="text/css">
-  <script>
-    $(function () {
-      $(".ld_head_search").load("./contents.php?c=ld_head_search");
-    });
+  <link rel="apple-touch-icon" href="https://poimal.jp/touch-icon.png"> -->
+ <!-- css読み込み -->
+  <link href="./css/css2" rel="stylesheet">
+  <link href="./css/all.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+ <!-- jsライブラリの読み込み -->
+  <script type="text/javascript" src="./js/jquery.js.ダウンロード"></script>
+
+ <!-- Font Awesomeが使えるようになる -->
+  <script src="https://kit.fontawesome.com/1f949d9516.js" crossorigin="anonymous"></script>
+
+  <!-- JavaScriptのコード：ページの特定の要素を読み込む -->
+  <script type="text/javascript">
+     $(() => {
+        $(".ld_head_search").load("./contents.php?c=ld_head_search");
+        $("#ld_top_search").load("./contents.php?c=ld_top_search");
+     });
   </script>
+
+  <!--240423 追加 -->
+  <!-- スタイルシートを外部から読み込むように設定 -->
+  <link href="./css/poimaru_01.css" rel="stylesheet">
 </head>
 
-<body>
-  <header class="l-header">
-  <script src="./パスワード編集｜ポイまる_files/party.min.js.ダウンロード"></script>
-  <script src="./パスワード編集｜ポイまる_files/main.js.ダウンロード"></script>
-  <div class="l-header__inner">
-    <div class="header__logo">
-      <a href="https://poimal.jp/ポイまる.html"><img src="./パスワード編集｜ポイまる_files/logo.svg" alt=""></a>
-    </div>
-    <ul class="nav--header">
-            
-            <li class="header__mypage">
-                <a href="https://poimal.jp/contents.php?c=mypage" class="header__mypage__link">
-                    <div class="header__mypage__name">
-                        <p>ゲスト <span>さん</span></p>
-                    </div>
-                    <div class="header__mypage__point"><span>-</span>P</div>
-                </a>
-                <div class="header__mypage__home"><a href="https://poimal.jp/ポイまる.html">
-                        <p>ホーム</p>
-                    </a>
-                </div>
-                <div class="header__mypage__list"><a href="https://poimal.jp/案件一覧｜ポイまる.html">
-                        <p>案件一覧</p>
-                    </a>
-                </div>
-                <div class="header__mypage__friend"><a href="https://poimal.jp/友達紹介｜ポイまる.html">
-                        <p>友達紹介</p>
-                    </a>
-                </div>
-                <!--<div class="header__mypage__favorite"><a href="">
-                        <p>お気に入り</p><span>21</span>
-                    </a>
-                </div>-->
-                <div class="header__mypage__trade"><a href="https://poimal.jp/ポイント交換一覧｜ポイまる.html">
-                        <p>交換する</p>
-                    </a>
-                </div>
-            </li>
-            
-      <li class="header__spmenu"><span></span><span></span><span></span></li>
-    </ul>
-  </div>
-    
-    <ul class="nav" id="nav__pc">
-    <li class="nav__item"><a href="https://poimal.jp/案件一覧｜ポイまる.html">案件一覧</a></li>
-    <li class="nav__item subnavip"><a class="subnavipa">タイプ別</a>
-      <ul class="nav__sub">
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%A2%E3%83%97%E3%83%AA%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アプリインストール</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0">ショッピング</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E7%94%B3%E8%BE%BC%E3%81%BF">サービス申込み</a></li>
-      </ul>
-    </li>
-    <li class="nav__item subnavip"><a class="subnavipa">カテゴリ別</a>
-      <ul class="nav__sub" style="display: none;">
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ashb459r">無料案件 (即反映)</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09astt617c">無料案件</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09at4syczn">無料案件（ゲームアプリ）</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b4uucsjq">クレジット・キャッシュカード</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atbvvjxf">化粧品・スキンケア・美容</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atk1jbqi">動画・電子書籍・音楽</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09aty823em">食品・飲み物</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09auszwhwn">通信回線・スマホ</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayhdxz7c">月額サービス</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayo0lh81">ファッション・小物</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09az0fnv32">旅行・ホテル・航空券</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09azjgrlkd">金融・投資・保険・不動産</a></li>
-        <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6">その他サービス</a></li>
-      </ul>
-    </li>
-    <li class="nav__item"><a href="https://poimal.jp/友達紹介｜ポイまる.html">友達紹介</a></li>
-    <li class="nav__item"><a href="https://poimal.jp/ポイまるの使い方｜ポイまる.html">ポイまるの使い方</a></li>
-    <li class="nav__item"><a href="https://poimal.jp/お知らせ一覧｜ポイまる.html">お知らせ</a></li>
-        <!-- <li class="nav__item"><a href="news_list">お気に入り</a></li> -->
-    <li class="nav__item--trade"><a href="https://poimal.jp/ポイント交換一覧｜ポイまる.html">ポイント交換一覧</a></li>
-        <!-- <li class="nav__item--mypage"><a href="./contents.php?c=mypage">マイページ</a></li> -->
-        <li class="nav__search--mypage ld_head_search"><form action="https://poimal.jp/contents.php" method="get" name="form">
-<input type="hidden" name="c" value="list">
-<input type="text" name="keyword" value="" size="30" maxlength="255" placeholder="フリーワード検索"><input type="submit" value="検索">
-</form></li>
-  </ul>
-    <ul class="nav" id="nav__sp">
-        <!-- <li class="nav__item"><a href="./案件一覧｜ポイまる.html">案件一覧</a></li> -->
-        <li class="nav__item subnavip"><a class="subnavipa">タイプ別</a>
-            <ul class="nav__sub">
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%A2%E3%83%97%E3%83%AA%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アプリインストール</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0">ショッピング</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E7%94%B3%E8%BE%BC%E3%81%BF">サービス申込み</a></li>
-            </ul>
-        </li>
-        <li class="nav__item subnavip"><a class="subnavipa">カテゴリ別</a>
-            <ul class="nav__sub">
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ashb459r">無料案件 (即反映)</a>
-                </li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09astt617c">無料案件</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09at4syczn">無料案件（ゲームアプリ）</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b4uucsjq">クレジット・キャッシュカード</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atbvvjxf">化粧品・スキンケア・美容</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atk1jbqi">動画・電子書籍・音楽</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09aty823em">食品・飲み物</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09auszwhwn">通信回線・スマホ</a>
-                </li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayhdxz7c">月額サービス</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayo0lh81">ファッション・小物</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09az0fnv32">旅行・ホテル・航空券</a>
-                </li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09azjgrlkd">金融・投資・保険・不動産</a></li>
-                <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6">その他サービス</a></li>
-            </ul>
-        </li>
-        <li class="nav__item"><a href="https://poimal.jp/閲覧履歴｜ポイまる.html">閲覧履歴</a></li>
-        <li class="nav__item"><a href="https://poimal.jp/ポイまるの使い方｜ポイまる.html">ポイまるの使い方</a></li>
-        <li class="nav__item"><a href="https://poimal.jp/お知らせ一覧｜ポイまる.html">お知らせ</a></li>
-        <li class="nav__item"><!--<a href="news_list">お気に入り</a>--></li>
-        <!-- <li class="nav__item"><a href="trade">ポイント交換一覧</a></li> -->
-        <!-- <li class="nav__item--mypage"><a href="./contents.php?c=mypage">マイページ</a></li> -->
-        <li class="nav__search--mypage ld_head_search"><form action="https://poimal.jp/contents.php" method="get" name="form">
-<input type="hidden" name="c" value="list">
-<input type="text" name="keyword" value="" size="30" maxlength="255" placeholder="フリーワード検索"><input type="submit" value="検索">
-</form></li>
-        <li class="nav__item">
-            <div class="header__mypage__name">
-                <p>ゲスト <span>さん</span></p>
-            </div>
-            <div class="header__mypage__point"><span>-</span>P</div>
-        </li>
-        <li class="nav__item">
-            <div class="header__login"><a href="https://poimal.jp/contents.php?c=mypage">マイページ</a></div>
-        </li>
-    </ul>
-  <!--nav-->
-    
+<!-- headセクションの終了 -->  <!-- headセクションの終了 -->  <!-- headセクションの終了 -->  
+<!-- headセクションの終了 -->  <!-- headセクションの終了 -->  <!-- headセクションの終了 -->  
 
-    <!--nav-->
+
+
+
+<body>
+
+
+
+
+
+<!-- headerセクションの開始 --> <!-- headerセクションの開始 -->  <!-- headerセクションの開始 -->
+<!-- headerセクションの開始 --> <!-- headerセクションの開始 -->  <!-- headerセクションの開始 -->  
+
+<header class="l-header">
+  <!-- パーティー用のJavaScriptファイルの読み込み -->
+    <script src="./js/party.min.js.ダウンロード"></script>
+  <!-- メインのJavaScriptファイルの読み込み -->
+    <script src="./js/main.js.ダウンロード"></script>
+
+  <!-- ヘッダー内部の要素 -->
+    <div class="l-header__inner">
+    <!-- ロゴを表示するための要素 -->
+      <div class="header__logo">
+        <a href="https://poimal.jp"><img src="./img/logo.svg" alt=""></a>
+      </div>
+    <!-- ヘッダーナビゲーションのリスト -->
+      <ul class="nav--header">
+      <!-- マイページメニューの要素 -->
+        <li class="header__mypage">
+        <!-- マイページ関連一旦コメントアウト -->
+          <!-- <a href="https://poimal.jp/contents.php?c=mypage" class="header__mypage__link"> -->
+          <!-- マイページのユーザー名 -->
+            <!-- <div class="header__mypage__name">
+              <p>ゲスト <span>さん</span></p>
+            </div> -->
+          <!-- マイページのポイント数 -->
+            <!-- <div class="header__mypage__point"><span>-</span>P</div>
+          </a> -->
+        <!-- ホームへのリンク -->
+          <div class="header__mypage__home"><a href="https://poimal.jp">
+            <p>ホーム</p>
+            </a>
+          </div>
+        <!-- 案件一覧へのリンク -->
+          <div class="header__mypage__list"><a href="https://poimal.jp/案件一覧｜ポイまる.html">
+            <p>案件一覧</p>
+            </a>
+          </div>
+        <!-- 友達紹介へのリンク -->
+          <div class="header__mypage__friend"><a href="https://poimal.jp/友達紹介｜ポイまる.html">
+            <p>友達紹介</p>
+            </a>
+          </div>
+        <!-- ポイント交換一覧へのリンク -->
+          <div class="header__mypage__trade"><a href="https://poimal.jp/ポイント交換一覧｜ポイまる.html">
+            <p>交換する</p>
+            </a>
+          </div>
+        </li>      
+      <!-- スマートフォンメニューのアイコン -->
+        <li class="header__spmenu"><span></span><span></span><span></span></li>
+      </ul>
+    </div>
+
+  <!-- ナビゲーションメニューのリスト -->
+    <ul class="nav" id="nav__pc">
+    <!-- 案件一覧へのリンク -->
+      <li class="nav__item"><a href="https://poimal.jp/案件一覧｜ポイまる.html">案件一覧</a></li>
+    <!-- タイプ別のサブメニュー -->
+      <!-- <li class="nav__item subnavip"><a class="subnavipa">タイプ別</a>
+        <ul class="nav__sub">
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%A2%E3%83%97%E3%83%AA%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アプリインストール</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0">ショッピング</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E7%94%B3%E8%BE%BC%E3%81%BF">サービス申込み</a></li>
+        </ul>
+      </li> -->
+    <!-- カテゴリ別のサブメニュー -->
+      <!-- <li class="nav__item subnavip"><a class="subnavipa">カテゴリ別</a>
+        <ul class="nav__sub">
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ashb459r">無料案件 (即反映)</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09astt617c">無料案件</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09at4syczn">無料案件（ゲームアプリ）</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b4uucsjq">クレジット・キャッシュカード</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atbvvjxf">化粧品・スキンケア・美容</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atk1jbqi">動画・電子書籍・音楽</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09aty823em">食品・飲み物</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09auszwhwn">通信回線・スマホ</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayhdxz7c">月額サービス</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayo0lh81">ファッション・小物</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09az0fnv32">旅行・ホテル・航空券</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09azjgrlkd">金融・投資・保険・不動産</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6">その他サービス</a></li>
+        </ul>
+      </li> -->
+      <li class="nav__item"><a href="https://poimal.jp/友達紹介｜ポイまる.html">友達紹介</a></li>
+      <li class="nav__item"><a href="https://poimal.jp/ポイまるの使い方｜ポイまる.html">ポイまるの使い方</a></li>
+      <li class="nav__item"><a href="https://poimal.jp/お知らせ一覧｜ポイまる.html">お知らせ</a></li>
+      <li class="nav__item--trade"><a href="https://poimal.jp/ポイント交換一覧｜ポイまる.html">ポイント交換一覧</a></li>
+       <!-- ld_head_search関連 -->
+      <!-- <li class="nav__search--mypage ld_head_search">
+        <form action="https://poimal.jp" method="get" name="form">
+          <input type="hidden" name="c" value="list">
+          <input type="text" name="keyword" value="" size="30" maxlength="255" placeholder="フリーワード検索"><input type="submit" value="検索">
+        </form>
+      </li> -->
+    </ul>
+
+  <!-- ナビゲーションメニューのリスト -->  
+    <!-- <ul class="nav" id="nav__sp"> -->
+      <!-- <li class="nav__item subnavip"><a class="subnavipa">タイプ別</a>
+          <ul class="nav__sub">
+            <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%A2%E3%83%97%E3%83%AA%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アプリインストール</a></li>
+            <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0">ショッピング</a></li>
+            <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E7%94%B3%E8%BE%BC%E3%81%BF">サービス申込み</a></li>
+          </ul>
+      </li> -->
+    <!-- サブメニュー：カテゴリ別 -->
+      <!-- <li class="nav__item subnavip"><a class="subnavipa">カテゴリ別</a>
+        <ul class="nav__sub">
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ashb459r">無料案件 (即反映)</a>
+          </li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09astt617c">無料案件</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09at4syczn">無料案件（ゲームアプリ）</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b4uucsjq">クレジット・キャッシュカード</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atbvvjxf">化粧品・スキンケア・美容</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atk1jbqi">動画・電子書籍・音楽</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09aty823em">食品・飲み物</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09auszwhwn">通信回線・スマホ</a>
+          </li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayhdxz7c">月額サービス</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayo0lh81">ファッション・小物</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09az0fnv32">旅行・ホテル・航空券</a>
+          </li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09azjgrlkd">金融・投資・保険・不動産</a></li>
+          <li class="nav__item__sub"><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6">その他サービス</a></li>
+        </ul>
+      </li> -->
+    <!-- その他のメニューアイテム -->
+      <!-- <li class="nav__item"><a href="https://poimal.jp/閲覧履歴｜ポイまる.html">閲覧履歴</a></li>
+      <li class="nav__item"><a href="https://poimal.jp/ポイまるの使い方｜ポイまる.html">ポイまるの使い方</a></li>
+      <li class="nav__item"><a href="https://poimal.jp/お知らせ一覧｜ポイまる.html">お知らせ</a></li> -->
+    <!-- ld_head_search関連 -->
+      <!-- <li class="nav__search--mypage ld_head_search">
+        <form action="https://poimal.jp/contents.php" method="get" name="form">
+          <input type="hidden" name="c" value="list">
+          <input type="text" name="keyword" value="" size="30" maxlength="255" placeholder="フリーワード検索"><input type="submit" value="検索">
+        </form>
+      </li> -->
+
+    <!-- ユーザ情報 -->
+      <!-- <li class="nav__item">
+        <div class="header__mypage__name">
+          <p>ゲスト <span>さん</span></p>
+        </div>
+        <div class="header__mypage__point"><span>-</span>P</div>
+      </li> -->
+    <!-- マイページへのリンク -->
+      <!-- <li class="nav__item">
+        <div class="header__login"><a href="https://poimal.jp/contents.php?c=mypage">マイページ</a></div>
+      </li> -->
+    <!-- </ul> -->
+
+  <!-- モーダルに関して -->
+      <div class="modal is-show" style="display: none;">
+    <!-- モーダルの背景 -->
+        <div class="modal__bg modalclose"></div>
+    <!-- モーダルウィンドウ -->
+         <div class="modal__window">
+      <!-- モーダルのコンテンツ -->
+            <div class="modal__contents">
+        <!-- モーダルの使用方法 -->
+               <div class="modal__use">
+        <!-- モーダルのタイトル -->
+               <div class="modal__use__title">毎日ログインキャンペーン！</div>
+                 <div class="modal__mainbg is-login01">
+                    <p>ログイン1日目</p>						
+                 <div class="camp__logo"><img src="./img/camp_logo.png" alt=""></div>
+                 <div class="camp__login"><img src="./img/camp_login2.png" alt="">
+                 </div>
+            </div>
+          <!-- モーダルを閉じるボタン -->
+                 <div class="closeBtn modalclose"></div>
+              </div>
+           </div>
+        </div>
+      </div>
+
+
 </header>
-<!--l-header-->
+
+<!-- headerセクションの終了 --> <!-- headerセクションの終了 -->  <!-- headerセクションの終了 -->
+<!-- headerセクションの終了 --> <!-- headerセクションの終了 -->  <!-- headerセクションの終了 -->
+
+
+
+
+
+
+
   <div class="l-BreadcrumbList">
     <ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
       <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
@@ -228,91 +319,97 @@
     </div>
   </section>
   <!--l-container-->
-  <footer class="l-footer">
-	<div class="l-footer__inner">
-		<ul class="nav--footer">
-			<li>
-				<dl>
-					<dt>タイプ別で探す</dt>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%A2%E3%83%97%E3%83%AA%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アプリインストール</a>
-					</dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0">ショッピング</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E7%94%B3%E8%BE%BC%E3%81%BF">サービス申込み</a></dd>
-				</dl>
-			</li>
-			<li>
-				<dl>
-					<dt>カテゴリ別で探す</dt>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ashb459r">無料案件 (即反映)</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09astt617c">無料案件</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09at4syczn">無料案件（ゲームアプリ）</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b4uucsjq">クレジット・キャッシュカード</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atbvvjxf">化粧品・スキンケア・美容</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atk1jbqi">動画・電子書籍・音楽</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09aty823em">食品・飲み物</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09auszwhwn">通信回線・スマホ</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayhdxz7c">月額サービス</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayo0lh81">ファッション・小物</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09az0fnv32">旅行・ホテル・航空券</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09azjgrlkd">金融・投資・保険・不動産</a></dd>
-					<dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6">その他サービス</a></dd>
-				</dl>
-			</li>
-			<li>
-				<ul>
-					<li><a href="https://poimal.jp/友達紹介｜ポイまる.html">友達紹介</a></li>
-					<li><a href="https://poimal.jp/ポイまるの使い方｜ポイまる.html">ポイまるの使い方</a></li>
-					<li><a href="https://poimal.jp/お知らせ一覧｜ポイまる.html">お知らせ</a></li>
-				</ul>
-			</li>
-			<li>
-				<ul>
-					<li><a href="https://poimal.jp/広告掲載について｜ポイまる.html">広告掲載について</a></li>
-					<li><a href="https://poimal.jp/利用規約｜ポイまる.html">利用規約</a></li>
-					<li><a href="https://poimal.jp/プライバシーポリシー｜ポイまる.html">プライバシーポリシー</a></li>
-					<li><a href="https://poimal.jp/会社概要｜ポイまる.html">会社概要</a></li>
-					<li><a href="https://poimal.jp/ポイまるの使い方｜ポイまる.html">ご利用ガイド</a></li>
-					<li><a href="https://poimal.jp/お問い合わせ｜ポイまる.html">お問い合わせ</a></li>
-				</ul>
-			</li>
-		</ul>
-		<div class="footer__sns">
-			<a href="https://www.instagram.com/Poimaru_offi" target="_blank">
-				<div class="footer__sns__image"><img src="./パスワード編集｜ポイまる_files/sns.jpg" alt=""></div>
-				<p class="footer__sns__name">© ポイまる</p>
-				<p class="footer__sns__btn">詳細はこちら</p>
-				<p><i class="fab fa-instagram"></i></p>
-			</a>
-		</div>
-		<div class="footer__sns">
-			<a href="https://mobile.twitter.com/Poimaru_offi" target="_blank">
-				<div class="footer__sns__image"><img src="./パスワード編集｜ポイまる_files/sns.jpg" alt=""></div>
-				<p class="footer__sns__name">© ポイまる</p>
-				<p class="footer__sns__btn">詳細はこちら</p>
-				<p><i class="fab fa-twitter"></i></p>
-			</a>
-		</div>
-	</div>
-	<div class="l-footer__inner">
-		<div class="footer__nav">
-			<ul>
-				<li><a href="https://poimal.jp/広告掲載について｜ポイまる.html">広告掲載について</a></li>
-				<li><a href="https://poimal.jp/プライバシーポリシー｜ポイまる.html">プライバシーポリシー</a></li>
-				<li><a href="https://poimal.jp/利用規約｜ポイまる.html">利用規約</a></li>
-				<li><a href="https://poimal.jp/会社概要｜ポイまる.html">会社概要</a></li>
-				<li><a href="https://poimal.jp/ポイまるの使い方｜ポイまる.html">ご利用ガイド</a></li>
-				<li><a href="https://poimal.jp/お問い合わせ｜ポイまる.html">お問い合わせ</a></li>
-			</ul>
-		</div>
-		<div class="footer__logo">
-			<a href="https://poimal.jp/ポイまる.html">ポイまる</a>
-		</div>
-		<div class="footer__copyright">
-			© ポイまる All rights reserved.
-		</div>
-	</div>
+
+
+
+
+<!-- footerセクションの開始 -->  <!-- footerセクションの開始 -->  <!-- footerセクションの開始 -->  
+<!-- footerセクションの開始 -->  <!-- footerセクションの開始 -->  <!-- footerセクションの開始 -->  
+
+<footer class="l-footer">
+  <div class="l-footer__inner">
+     <ul class="nav--footer">
+        <!-- <li>
+           <dl>
+              <dt>タイプ別で探す</dt>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%A2%E3%83%97%E3%83%AA%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アプリインストール</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0">ショッピング</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E7%94%B3%E8%BE%BC%E3%81%BF">サービス申込み</a></dd>
+           </dl>
+        </li> -->
+        <!-- <li>
+           <dl>
+              <dt>カテゴリ別で探す</dt>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ashb459r">無料案件 (即反映)</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09astt617c">無料案件</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09at4syczn">無料案件（ゲームアプリ）</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b4uucsjq">クレジット・キャッシュカード</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atbvvjxf">化粧品・スキンケア・美容</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09atk1jbqi">動画・電子書籍・音楽</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09aty823em">食品・飲み物</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09auszwhwn">通信回線・スマホ</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayhdxz7c">月額サービス</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ayo0lh81">ファッション・小物</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09az0fnv32">旅行・ホテル・航空券</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09azjgrlkd">金融・投資・保険・不動産</a></dd>
+              <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6">その他サービス</a></dd>
+           </dl>
+        </li> -->
+        <li>
+           <ul>
+              <li><a href="https://poimal.jp/友達紹介｜ポイまる.html">友達紹介</a></li>
+              <li><a href="https://poimal.jp/ポイまるの使い方｜ポイまる.html">ポイまるの使い方</a></li>
+              <li><a href="https://poimal.jp/お知らせ一覧｜ポイまる.html">お知らせ</a></li>
+           </ul>
+        </li>
+        <li>
+           <ul>
+              <li><a href="https://poimal.jp/広告掲載について｜ポイまる.html">広告掲載について</a></li>
+              <li><a href="https://poimal.jp/利用規約｜ポイまる.html">利用規約</a></li>
+              <li><a href="https://poimal.jp/プライバシーポリシー｜ポイまる.html">プライバシーポリシー</a></li>
+              <li><a href="https://poimal.jp/会社概要｜ポイまる.html">会社概要</a></li>
+              <li><a href="https://poimal.jp/お問い合わせ｜ポイまる.html">お問い合わせ</a></li>
+           </ul>
+        </li>
+     </ul>
+ 
+   <div class="footer__sns">
+        <a href="https://mobile.twitter.com/Poimaru_offi" target="_blank">
+           <div class="footer__sns__image"><img src="./ポイまる_files/sns.jpg" alt=""></div>
+           <p class="footer__sns__name">© ポイまる</p>
+           <p class="footer__sns__btn">詳細はこちら</p>
+           <p><i class="fab fa-twitter"></i></p>
+        </a>
+     </div>
+  </div>
+
+  <div class="l-footer__inner">
+     <div class="footer__nav">
+        <ul>
+           <li><a href="https://poimal.jp/広告掲載について｜ポイまる.html">広告掲載について</a></li>
+           <li><a href="https://poimal.jp/プライバシーポリシー｜ポイまる.html">プライバシーポリシー</a></li>
+           <li><a href="https://poimal.jp/利用規約｜ポイまる.html">利用規約</a></li>
+           <li><a href="https://poimal.jp/会社概要｜ポイまる.html">会社概要</a></li>
+           <li><a href="https://poimal.jp/ポイまるの使い方｜ポイまる.html">ご利用ガイド</a></li>
+           <li><a href="https://poimal.jp/お問い合わせ｜ポイまる.html">お問い合わせ</a></li>
+
+        </ul>
+     </div>
+ 
+   <div class="footer__copyright">
+        © ポイまる All rights reserved.
+     </div>
+  </div>
 </footer>
-<!--l-footer-->
+
+<!-- footerセクションの終了 -->  <!-- footerセクションの終了 -->  <!-- footerセクションの終了 -->  
+<!-- footerセクションの終了 -->  <!-- footerセクションの終了 -->  <!-- footerセクションの終了 -->  
+
+
+
+
+
+
 
 <script>
 	$(function () {
