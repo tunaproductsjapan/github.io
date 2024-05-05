@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<!-- saved from url=(0038)https://poimal.jp/ポイまる.html -->
 
 <!-- HTML文書の開始と、言語を日本語に設定 -->
 <html lang="ja">
-<!-- メタデータや文字エンコーディングを指定するためのheadセクションの開始 -->  
+<!-- headセクションの開始 -->  
   <head>
-  <!-- 文字エンコーディングをUTF-8に設定 -->
+  <!-- UTF-8に設定 -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <!-- ビューポートの設定：デバイスの幅に合わせ、ズームを無効にする -->
+  <!-- ビューポートの設定：デバイスの幅に合わせ、ズームを無効 -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <!-- タイトル：「ポイまる」 -->
     <title>ポイまる</title>
-  <!-- ページの説明 -->
-    <meta name="description" content="">
-  <!-- ページのキーワード -->
-    <meta name="keywords" content="">
   <!-- ページのサムネイル画像 -->
     <meta name="thumbnail" content="./file/box/thumbnail.jpg">
-  <!-- jQueryライブラリの読み込み -->
-    <script type="text/javascript" src="./ポイまる_files/jquery.js.ダウンロード"></script>
-  <!-- サイトのファビコンの設定 -->
-    <link rel="icon" type="image/x-icon" href="https://poimal.jp/favicon.ico">
-  <!-- iOS用のアイコンの設定 -->
-    <link rel="apple-touch-icon" href="https://poimal.jp/touch-icon.png">
-  <!-- スタイルシートの読み込み -->
-    <link href="./ポイまる_files/css2" rel="stylesheet">
-  <!-- 追加のスタイルシートの読み込み -->
-    <link rel="stylesheet" href="./ポイまる_files/all.min.css">
-  <!-- 特定のスタイルシートの読み込み -->
-    <link href="./ポイまる_files/style.css" rel="stylesheet" type="text/css">
+  <!-- 一旦コメントアウト設定 -->
+    <!-- <link rel="icon" type="image/x-icon" href="https://poimal.jp/favicon.ico">
+    <link rel="apple-touch-icon" href="https://poimal.jp/touch-icon.png"> -->
+  <!-- css読み込み -->
+    <link href="./css/css2" rel="stylesheet">
+    <link href="./css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <!-- jsライブラリの読み込み -->
+    <script type="text/javascript" src="./js/jquery.js.ダウンロード"></script>
 
   <!-- JavaScriptのコード：ページの特定の要素を読み込む -->
     <script type="text/javascript">
@@ -38,33 +30,10 @@
         });
     </script>
 
-    <style>
-    /* ローディング中の要素に適用されるスタイル */
-      .is-loading {
-      /* 背景にグラデーションを設定 */
-        background: linear-gradient(90deg, #e0e0e0 0%, #cecece 33%, #e0e0e0 66%, #cecece 100%);
-      /* 背景のサイズを設定 */
-        background-size: 300% 300%;
-      /* グラデーションのアニメーションを設定 */
-        animation: GradietionAnimation 1s linear infinite;
-      /* 要素の高さを設定 */
-        height: 150px;
-      }  
-      /* ローディング中のリストアイテムに適用されるスタイル */
-        .top__block--list li.is-loading {
-      /* 背景にグラデーションを設定 */
-        background: linear-gradient(90deg, #e0e0e0 0%, #cecece 33%, #e0e0e0 66%, #cecece 100%);
-      /* 背景のサイズを設定 */
-        background-size: 300% 300%;
-      /* 要素の高さを設定 */
-        height: 200px;
-      }
-    /* グラデーションのアニメーションを定義 */
-      @keyframes GradietionAnimation {
-        0%{background-position:0% 50%}
-      100%{background-position:100% 50%}
-      }
-    </style>
+  <!--240423 追加 -->
+  <!-- スタイルシートを外部から読み込むように設定 -->
+    <link href="./css/poimaru_01.css" rel="stylesheet">
+
   </head>
 
 
