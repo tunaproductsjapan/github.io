@@ -53,9 +53,11 @@
 
 
 <body>
-
-
-
+  <!--240423 追加 -->
+  <!-- FirebaseのJavaScriptライブラリを読み込む等 -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+  <script type="module" src="/js/index.js"></script>
 
 
 <!-- headerセクションの開始 --> <!-- headerセクションの開始 -->  <!-- headerセクションの開始 -->
@@ -246,87 +248,69 @@
 
 
 
-	<div class="l-BreadcrumbList">
-		<ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
-			<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="https://poimal.jp/">
-					<span itemprop="name">トップ</span></a>
-				<meta itemprop="position" content="1">
-			</li>
-			<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-				<span itemprop="name">案件一覧</span>
-				<meta itemprop="position" content="2">
-			</li>
-		</ol>
+ <div class="l-BreadcrumbList">
+	<ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
+		<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="https://poimal.jp/">
+				<span itemprop="name">トップ</span></a>
+			<meta itemprop="position" content="1">
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+			<span itemprop="name">案件一覧</span>
+			<meta itemprop="position" content="2">
+		</li>
+	</ol>
+ </div>
+
+ <section class="l-container">
+	<div class="main">
+		<!-- <div class="top__search">
+			<h2>案件を探す SEARCH</h2>
+			<script type="text/javascript" src="./案件一覧｜ポイまる_files/search.js.ダウンロード"></script><form action="https://poimal.jp/contents.php" method="get" name="form"><input type="hidden" name="c" value="list">
+			<div class="top__search__inner">
+				<div class="top__search__cate"><select name="ih09b3qww0pb"><option value="">選択してください</option><option value="fh09ashb459r">無料案件（即反映）</option><option value="fh09astt617c">無料案件</option><option value="fh09at4syczn">無料案件（ゲームアプリ）</option><option value="fh09b4uucsjq">クレジット･キャッシュカード</option><option value="fh09atbvvjxf">化粧品･スキンケア･美容</option><option value="fh09atk1jbqi">動画･電子書籍･音楽</option><option value="fh09aty823em">食品･飲み物</option><option value="fh09auszwhwn">通信回線･スマホ</option><option value="fh09ayhdxz7c">月額サービス</option><option value="fh09ayo0lh81">ファッション･小物</option><option value="fh09az0fnv32">旅行･ホテル･航空券</option><option value="fh09azjgrlkd">金融･投資･保険･不動産</option><option value="fh09b1p28cj6" selected="selected">その他サービス</option><option value="fh3r6ozdizo5"></option></select></div>
+				<div class="top__search__point"><select name="ih3cp4lurwva"><option value="">選択してください</option><option value="アプリインストール" selected="selected">アプリインストール</option><option value="ショッピング">ショッピング</option><option value="サービス申込み">サービス申込み</option></select></div>
+				<div class="top__search__keyword"><input type="text" name="keyword" value="" size="30" maxlength="255" placeholder="広告名やキーワードを入力"></div>
+				<div class="top__search__btn"><input type="submit" value="検索"></div>
+			</div>
+			<input type="hidden" name="order" value="null"><input type="hidden" name="order_key" value="null"></form>
+		</div> -->
+		
+		<div class="list newList">
+			<h2>案件一覧</h2>
+			<!-- <div class="list__count--head">1 - 3を表示／3件中</div> -->
+			<!-- <div class="list__sort"><select name="order"> -->
+				<!-- <option value="entry_count_desc">ランキング順</option>
+				<option value="edit_unix_desc">新着順</option> -->
+				<!-- <option value="points_desc">ポイント単価の高い順</option>
+				<option value="point_rate_desc">ポイント率の高い順</option>
+				<option value="points_asc">ポイント単価の低い順</option>
+				<option value="point_rate_asc">ポイント率の低い順</option> -->
+				<!-- </select>
+			</div> -->
+
+			<ul class="list__block">
+				<!-- <li>
+					<a href="https://fairpublicrelation.com/link.php?i=phon1swb1863&m=mhokqqncam8o">
+						<div class="top__block__image">
+							<img src="https://firebasestorage.googleapis.com/v0/b/poimaruapp.appspot.com/o/poimal%2Fricromart144_144.png?alt=media&token=d3f3c280-3daa-4ba2-bdc8-e5508037e101" alt="">
+						</div>
+						<div class="newList__info">
+							<p class="top__block__text--title">外壁塗装一括見積もりヒカーク</p> 
+							<p class="top__block__text--s">サービス申込み</p>
+							<p class="top__block__point--s"><span>60000</span>P</p>
+						</div>
+					</a>
+				</li> -->
+			</ul>
+
+			<!-- <div class="list__count--foot">1 - 3を表示／3件中</div>
+			<div class="pager">
+			<ul>
+				<li><span>1</span></li> 
+			</ul>
+		</div> -->
 	</div>
-	<section class="l-container">
-		<div class="main">
-			<div class="top__search">
-				<h2>案件を探す SEARCH</h2>
-				<script type="text/javascript" src="./案件一覧｜ポイまる_files/search.js.ダウンロード"></script><form action="https://poimal.jp/contents.php" method="get" name="form"><input type="hidden" name="c" value="list">
-					<div class="top__search__inner">
-						<div class="top__search__cate"><select name="ih09b3qww0pb"><option value="">選択してください</option><option value="fh09ashb459r">無料案件（即反映）</option><option value="fh09astt617c">無料案件</option><option value="fh09at4syczn">無料案件（ゲームアプリ）</option><option value="fh09b4uucsjq">クレジット･キャッシュカード</option><option value="fh09atbvvjxf">化粧品･スキンケア･美容</option><option value="fh09atk1jbqi">動画･電子書籍･音楽</option><option value="fh09aty823em">食品･飲み物</option><option value="fh09auszwhwn">通信回線･スマホ</option><option value="fh09ayhdxz7c">月額サービス</option><option value="fh09ayo0lh81">ファッション･小物</option><option value="fh09az0fnv32">旅行･ホテル･航空券</option><option value="fh09azjgrlkd">金融･投資･保険･不動産</option><option value="fh09b1p28cj6" selected="selected">その他サービス</option><option value="fh3r6ozdizo5"></option></select></div>
-						<div class="top__search__point"><select name="ih3cp4lurwva"><option value="">選択してください</option><option value="アプリインストール" selected="selected">アプリインストール</option><option value="ショッピング">ショッピング</option><option value="サービス申込み">サービス申込み</option></select></div>
-						<div class="top__search__keyword"><input type="text" name="keyword" value="" size="30" maxlength="255" placeholder="広告名やキーワードを入力"></div>
-						<div class="top__search__btn"><input type="submit" value="検索"></div>
-					</div>
-				<input type="hidden" name="order" value="null"><input type="hidden" name="order_key" value="null"></form>
-			</div>
-			<div class="list newList">
-				<h2>案件一覧</h2>
-				<div class="list__count--head">1 - 3を表示／3件中</div>
-				<div class="list__sort"><select name="order">
-						<option value="entry_count_desc">ランキング順</option>
-						<option value="edit_unix_desc">新着順</option>
-						<!-- <option value="points_desc">ポイント単価の高い順</option>
-						<option value="point_rate_desc">ポイント率の高い順</option>
-						<option value="points_asc">ポイント単価の低い順</option>
-						<option value="point_rate_asc">ポイント率の低い順</option> -->
-					</select></div>
-				<ul class="list__block">
-					<li>
-	<a href="https://poimal.jp/contents.php?c=detail&amp;id=ihb8bauy5ssv">
-		<div class="top__block__image"><img src="./案件一覧｜ポイまる_files/106fdd80494148c8178e7c0141b02263.jpg" alt=""></div>
-		<div class="newList__info">
-			<p class="top__block__text--title">クレマス クレーンゲームマスター【初回課金】</p>
-			<p class="top__block__text--s">アプリインストール</p>
-			
-			<p class="top__block__point--s"><span>4,060</span>P</p>
-			
-			
-		</div>
-	</a>
-</li><li>
-	<a href="https://poimal.jp/contents.php?c=detail&amp;id=ihcg6g8m7lzu">
-		<div class="top__block__image"><img src="./案件一覧｜ポイまる_files/91a44826319cba7688d17dd255418f0b.jpg" alt=""></div>
-		<div class="newList__info">
-			<p class="top__block__text--title">ゼクシィ 内祝い</p>
-			<p class="top__block__text--s">アプリインストール</p>
-			
-			<p class="top__block__point--s"><span>1,400</span>P</p>
-			
-			
-		</div>
-	</a>
-</li><li>
-	<a href="https://poimal.jp/contents.php?c=detail&amp;id=ihbxqnlp2lbe">
-		<div class="top__block__image"><img src="./案件一覧｜ポイまる_files/1c655b122a2374e70fd9a211d5e6b0e3.jpg" alt=""></div>
-		<div class="newList__info">
-			<p class="top__block__text--title">エルピオ 都市ガス</p>
-			<p class="top__block__text--s">アプリインストール</p>
-			
-			<p class="top__block__point--s"><span>15,000</span>P</p>
-			
-			
-		</div>
-	</a>
-</li>
-				</ul>
-				<div class="list__count--foot">1 - 3を表示／3件中</div>
-				<div class="pager">
-					<ul><li><span>1</span></li> </ul>
-				</div>
-			</div>
 <!--		<div class="top__bnrs">
 				<ul class="top__block">
 					<li>
@@ -343,18 +327,18 @@
 					</li>
 				</ul>
 			</div> -->
-		</div>
-		<div class="side">
-  <div class="side__bnr"><a href="https://poimal.jp/"><img src="./案件一覧｜ポイまる_files/bnr_sample.jpg" alt=""></a></div>
-  <div class="side__list">
+ </div>
+ <div class="side">
+ <div class="side__bnr"><a href="https://poimal.jp/"><img src="./案件一覧｜ポイまる_files/bnr_sample.jpg" alt=""></a></div>
+  <!-- <div class="side__list">
     <dl>
       <dt>タイプ別で探す</dt>
       <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%A2%E3%83%97%E3%83%AA%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">アプリインストール</a></dd>
       <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B7%E3%83%A7%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0">ショッピング</a></dd>
       <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6&amp;ih3cp4lurwva=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E7%94%B3%E8%BE%BC%E3%81%BF">サービス申込み</a></dd>
     </dl>
-  </div>
-  <div class="side__list">
+  </div> -->
+  <!-- <div class="side__list">
     <dl>
       <dt>カテゴリ別で探す</dt>
       <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09ashb459r">無料案件(即反映)</a></dd>
@@ -371,8 +355,8 @@
       <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09azjgrlkd">金融・投資・保険・不動産</a></dd>
       <dd><a href="https://poimal.jp/案件一覧｜ポイまる.html&amp;ih09b3qww0pb=fh09b1p28cj6">その他サービス</a></dd>
     </dl>
-  </div>
-  <div class="side__bnr"><a href="https://poimal.jp/"><img src="./案件一覧｜ポイまる_files/bnr_sample.jpg" alt=""></a></div>
+  </div> -->
+  <!-- <div class="side__bnr"><a href="https://poimal.jp/"><img src="./案件一覧｜ポイまる_files/bnr_sample.jpg" alt=""></a></div> -->
 </div>
 		<div class="top__about">
 			<div class="top__about__image"><img src="./案件一覧｜ポイまる_files/top_about.jpg" alt=""></div>
@@ -475,67 +459,137 @@
  
 
 
+	<script>
+		$(function () {
+			// 「header__spmenu」というクラスを持つ要素がクリックされた時
+			$(".header__spmenu").on('click', function () {
+				// クリックされた要素に「active」クラスを切り替える
+				$(this).toggleClass('active');
+				// 「nav」というクラスを持つ要素に「panelactive」クラスを切り替える
+				$(".nav").toggleClass('panelactive');
+				// 「l-header」というクラスを持つ要素に「active_mode」クラスを切り替える
+				$(".l-header").toggleClass('active_mode');
+			});
 
-
-
-
-<script>
-	$(function () {
-		$(".header__spmenu").on('click', function () {
-			$(this).toggleClass('active');
-			$(".nav").toggleClass('panelactive');
-			$(".l-header").toggleClass('active_mode');
-		});
-
-	if($('.header__spmenu').css('display') == 'none'){
-			$(document).on({
-			"mouseenter": function(){
-				$(this).children('ul').fadeIn();
-			},
-			"mouseleave": function(){
-				$(this).children('ul').hide();
+			// 「header__spmenu」というクラスを持つ要素が非表示の場合
+			if ($('.header__spmenu').css('display') == 'none') {
+				// 「subnavip」というクラスを持つ要素にマウスが乗ったり離れたりした時
+				$(document).on({
+					"mouseenter": function () {
+						// マウスが乗った要素の子要素の「ul」をフェードインさせる
+						$(this).children('ul').fadeIn();
+					},
+					"mouseleave": function () {
+						// マウスが離れた要素の子要素の「ul」を非表示にする
+						$(this).children('ul').hide();
+					}
+				}, ".subnavip");
+			} else {
+				// 非表示でない場合、「subnavipa」というクラスを持つ要素がクリックされた時
+				$(".subnavipa").on('click', function () {
+					// クリックされた要素の親要素の「li」に「active」クラスを切り替える
+					$(this).parent('li').toggleClass('active');
+					// クリックされた要素の親要素の子要素の「ul」に「active」クラスを切り替える
+					$(this).parent('li').children('ul').toggleClass('active');
+					// リンクのデフォルトの動作を防ぐ
+					return false;
+				});
 			}
-			}, ".subnavip");
-		}else{
-			$(".subnavipa").on('click', function () {
-				$(this).parent('li').toggleClass('active');
-				$(this).parent('li').children('ul').toggleClass('active');
+
+			// ウィンドウが読み込まれた時またはスクロールした時
+			$(window).on('load scroll', function () {
+				// 「fadein」というクラスを持つ要素ごとに
+				$('.fadein').each(function () {
+					// 要素のオフセット位置を取得する
+					var elemPos = $(this).offset().top;
+					// 現在のスクロール位置を取得する
+					var scroll = $(window).scrollTop();
+					// ウィンドウの高さを取得する
+					var windowHeight = $(window).height();
+					// 要素が表示されたら
+					if (scroll > elemPos - windowHeight + 100) {
+						// 要素に「scrollin」クラスを追加する
+						$(this).addClass('scrollin');
+					}
+				});
+			});
+
+			// アンカーリンクがクリックされた時
+			$('a[href^="#"]').on('click', function () {
+				// 対象のhrefを取得する
+				var href = $(this).attr("href");
+				// 対象の要素を取得する
+				var target = $(href == "#" || href == "" ? 'html' : href);
+				// 対象要素のオフセット位置を取得する
+				var position = target.offset().top + 0;
+				// スムーズにスクロールする
+				$('body,html').animate({
+					scrollTop: position
+				}, 400, 'swing');
+				// リンクのデフォルトの動作を防ぐ
 				return false;
 			});
-		}
-
-	$(window).on('load scroll', function () {
-			$('.fadein').each(function () {
-				var elemPos = $(this).offset().top;
-				var scroll = $(window).scrollTop();
-				var windowHeight = $(window).height();
-				if (scroll > elemPos - windowHeight + 100) {
-					$(this).addClass('scrollin');
-				}
-			});
 		});
-		$('a[href^="#"]').on('click', function () {
-			var href = $(this).attr("href");
-			var target = $(href == "#" || href == "" ? 'html' : href);
-			var position = target.offset().top + 0;
-			$('body,html').animate({
-				scrollTop: position
-			}, 400, 'swing');
-			return false;
-		});
-	});
-</script>
+	</script>
 
-<script>
-    $(() =>{
-        const cate = $('[name=ih09b3qww0pb]').val();
-        const point = $('[name=ih3cp4lurwva]').val();
-        if (!cate){
-            $('select[name=ih09b3qww0pb] > option:nth-child(1)').text('選択');
-        }
-        if (!point){
-            $('select[name=ih3cp4lurwva] > option:nth-child(1)').text('選択');
-        }
-    });
-</script>
-</body></html>
+	<script>
+		$(() => {
+			// 名前が「ih09b3qww0pb」の入力要素の値を取得する
+			const cate = $('[name=ih09b3qww0pb]').val();
+			// 名前が「ih3cp4lurwva」の入力要素の値を取得する
+			const point = $('[name=ih3cp4lurwva]').val();
+			// 「cate」が設定されていない場合
+			if (!cate) {
+				// 「ih09b3qww0pb」という名前のセレクトボックスの最初のオプションのテキストを「選択」に変更する
+				$('select[name=ih09b3qww0pb] > option:nth-child(1)').text('選択');
+			}
+			// 「point」が設定されていない場合
+			if (!point) {
+				// 「ih3cp4lurwva」という名前のセレクトボックスの最初のオプションのテキストを「選択」に変更する
+				$('select[name=ih3cp4lurwva] > option:nth-child(1)').text('選択');
+			}
+		});
+	</script>
+
+
+  <!--240423 追加 -->
+  <script>
+    // Firebaseの設定
+      document.addEventListener('DOMContentLoaded', function() {
+        const target_elms = document.querySelectorAll('[data-content-id]');
+
+        const cb = function(entries, observer) {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            const ld_content_id = entry.target.dataset.contentId;
+          
+            // Firestoreからデータを取得
+            const db = firebase.firestore();
+            const docRef = db.collection("contents").doc(ld_content_id);
+            docRef.get().then((doc) => {
+              if (doc.exists) {
+                // コンテンツを表示
+                entry.target.innerHTML = doc.data().content;
+                entry.target.classList.remove('is-loading');
+              } else {
+              console.log("No such document!");
+              }
+            }).catch((error) => {
+              console.log("Error getting document:", error);
+            });
+              observer.unobserve(entry.target);
+            }
+          });
+        };
+
+        const io = new IntersectionObserver(cb);
+        target_elms.forEach(elm => {
+          elm.classList.add('is-loading');
+          io.observe(elm);
+        });
+      });
+    </script>
+
+
+  </body>
+</html>

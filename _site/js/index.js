@@ -2,68 +2,47 @@ import { firestore } from "./firebase.js";
 
 window.onload = async () => {
 
-// //     ////データの読み取り(1件)
-// //     const docId = "8VdhH86buIVuI5lZinH1";
-// //     const doc = await firestore.collection("todo").doc(docId).get();
-    
-// //     if (doc.exists) {
-// //         console.log(doc.id);
-// //         console.log(doc.data());
-// //     } else {
-// //         console.log("Document does not exist!");
-// //     }
-// // };
-
-// // //データの読み取り(複数)
-//     // const snapShot = await firestore.collection("todo").get();
-//     // const proj = snapShot.docs.map((doc) => ({
-//     //     id: doc.id,
-//     //     shukudai: doc.data().shukudai,
-//     // }));
-
-//     // console.log(proj);
-
-
-// // //データの読み取り(絞込みを行う)
-// //     const snapShot = await firestore
-// //         .collection("todo")
-// //         .where("category", "==", "国語")
-// //         .get();
-
-// //     const proj = snapShot.docs.map((doc) => ({
-// //         id: doc.id,
-// //         dekita: doc.data().dekita,
-// //         category: doc.data().category,
-// //     }));
-// //     console.log(proj);
-
-
-//試し
     //データの読み取り(絞込みを行う)
     const snapShot = await firestore
-        .collection("todo")
-        .where("category", "==", "国語")
+        .collection("projectManagement")
+        .limit(10)
         .get();
 
-    const proj = snapShot.docs.map((doc) => ({
-        id: doc.id,
-        dekita: doc.data().dekita,
-        category: doc.data().category,
-    }));
+        const proj = snapShot.docs.map((doc) => ({
+            id: doc.id,
+            url: doc.data().url,
+            image: doc.data().image,
+            name: doc.data().name,
+            how_to_get: doc.data().how_to_get,
+            point: doc.data().point,
+        }));
+
+        console.log(proj);
 
     // HTMLにデータを表示する
     displayData(proj);
 };
 
-//試し
 function displayData(projData) {
     // データ表示用の要素を取得
-    const dataList = document.getElementById('data-list');
+    const dataList = document.querySelector('.list__block');
+    // const dataList = document.getElementById('list__block');
 
     // データをHTMLに追加して表示
     projData.forEach((data) => {
         const listItem = document.createElement('li');
-        listItem.textContent = `ID: ${data.id}, できた: ${data.dekita}, カテゴリー: ${data.category}`;
+        listItem.innerHTML = `
+            <a href="${data.url}">
+                <div class="top__block__image">
+                    <img src="${data.image}" alt="">
+                </div>
+                <div class="newList__info">
+                    <p class="top__block__text--title">${data.name}</p>
+                    <p class="top__block__text--s">${data.how_to_get}</p>
+                    <p class="top__block__point--s"><span>${data.point}</span>P</p>
+                </div>
+            </a>
+        `;
         dataList.appendChild(listItem);
     });
 }
