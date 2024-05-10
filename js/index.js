@@ -19,6 +19,7 @@ window.onload = async () => {
 
         console.log(proj);
 
+
     // HTMLにデータを表示する
     displayData(proj);
 };
